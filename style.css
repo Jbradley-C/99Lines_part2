@@ -1,0 +1,66 @@
+/* Applying page background and aligning text */
+body {
+	background-color: rgb(126, 63, 63);
+	text-align: center;
+}
+
+/* Define properties of listbox and call animation */
+.friend {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: 10em;
+	margin-left: 10em;
+	background-color: red;
+	animation-name: changeColor;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	Border: 1em solid rgb(82, 8, 88);
+}
+
+.friend>h3 {
+	text-transform: uppercase;
+}
+
+/*Defining headline geometry */
+h1 {
+	height: 50px;
+	/* overflow: hidden; */
+	position: relative;
+	/* background: rgb(74, 12, 80); */
+	color: rgb(44, 190, 178);
+	/* border: 1px solid orange; */
+}
+
+/* Setting up marquee position & attribut */
+h1 > p {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	line-height: 50px;
+	text-align: center;
+
+	/* Apply animation to this element */
+
+	animation: grow-bigger 3s cubic-bezier(0.84, -0.65, 0.14, 1.34) infinite;
+}
+/* Move it (define the animation) */
+
+@keyframes grow-bigger {
+	0% {
+		transform: scale(.5);
+	}
+	100% {
+		transform: scale(4);
+	}
+}
+
+/* Changing colors of the Friends box */
+@keyframes changeColor {
+	from {
+		background-color: red;
+	}
+	to {
+		background-color: yellow;
+	}
+}
